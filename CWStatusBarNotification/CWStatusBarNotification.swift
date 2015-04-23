@@ -42,10 +42,6 @@ class ScrollLabel : UILabel {
     
     var textImage : UIImageView!
 
-    override init() {
-        super.init()
-    }
-
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -364,7 +360,7 @@ class CWStatusBarNotification : NSObject {
             self.createNotificationWindow()
             
             // create ScrollLabel
-            self .createNotificationLabelWithMessage(message)
+            self .createNotificationLabelWithMessage(message as String)
             
             // create status bar view
             self.createStatusBarView()
